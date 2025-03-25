@@ -1,0 +1,2171 @@
+@charset 'utf-8';
+
+/* <!-- webfont --> */
+/* kdam-thmor-pro-latin-400-normal */
+@font-face {
+  font-family: 'Kdam Thmor Pro';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/kdam-thmor-pro@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/kdam-thmor-pro@latest/latin-400-normal.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  /*Chrome, Safari, newer versions of Opera*/
+  -moz-text-size-adjust: none;
+  /*Firefox*/
+  -ms-text-size-adjust: none;
+  /*Ie*/
+  -o-text-size-adjust: none;
+  /*old versions of Opera*/
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 22px;
+  line-height: 1.5em;
+  color: #fff;
+  background-color: #0D0D0D;
+}
+
+#banner,
+#section1,
+#section2,
+#section4,
+#section5,
+#buy_ticket,
+#footer {
+  overflow: hidden;
+}
+
+
+/* header */
+#header {
+  width: 90%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.inner_header {
+  height: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header .inner_header .scrolled {
+  background: #0d0d0d;
+  /* 스크롤 도달 시 배경색 변경 */
+}
+
+.logo {
+  width: clamp(147px, 15vw, 250px);
+}
+
+.gnb {
+  display: flex;
+  font-family: 'Kdam Thmor Pro';
+  font-size: 22px;
+}
+
+.gnb li {
+  margin-left: 70px;
+}
+
+/* pc에서 햄버거 없애기 */
+#header .mobile_gnb {
+  display: none;
+}
+
+/* banner */
+
+#banner {
+  height: 90vh;
+  background: url(../images/main_image.jpg) no-repeat center/cover;
+  position: relative;
+  display: flex;
+}
+
+.inner_banner {
+  width: 100%;
+  padding: 0 5%;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.get_ticket img {
+  position: absolute;
+  animation: moveArrow 0.6s linear infinite;
+  /* 4초 동안 반복 애니메이션 */
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translate(0, 0);
+    /* 시작 위치 */
+  }
+
+  25% {
+    transform: translate(-20%, -20%);
+    /* 오른쪽 아래로 이동 */
+  }
+
+  100% {
+    transform: translate(0, 0);
+    /* 원래 위치로 돌아옴 */
+  }
+}
+
+.ticket_text {
+  line-height: 120%;
+}
+
+.get_ticket {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(27px, 3vw, 30px);
+  font-weight: 500;
+  width: 98%;
+  position: relative;
+  cursor: pointer;
+}
+
+.get_ticket img {
+  display: block;
+  width: clamp(30px, 4vw, 60px);
+  height: auto;
+  position: absolute;
+  right: 4.7em;
+  bottom: 2.5em;
+  width: 2em;
+  /* 글자 크기에 비례 */
+  max-width: 10%;
+  /* 화면 크기 제한 */
+}
+
+.your {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 400;
+}
+
+.main_slogan {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4em;
+}
+
+.outline_text {
+  margin: 0 30px;
+}
+
+.main_slogan p {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(80px, 7.5vw, 138px);
+  font-weight: 500;
+  line-height: 1.7em;
+}
+
+.main_slogan {
+  justify-content: center;
+  gap: 20px;
+  /* 단어들 간 간격 */
+  color: #fff;
+  /* 글자 색상 */
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  /* 전체가 서서히 나타나는 애니메이션 */
+}
+
+.slogan-text {
+  opacity: 0;
+  transform: translateY(30px);
+  /* 아래로 떨어져 있는 상태 */
+  animation: slideUp 1s forwards;
+}
+
+.explore {
+  animation-delay: 0s;
+}
+
+.beyond_title {
+  animation-delay: 0.2s;
+}
+
+.stars {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* 원위치로 올라오기 */
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    /* 전체에 서서히 나타나는 애니메이션 */
+  }
+}
+
+
+.outline_text {
+  color: transparent;
+  -webkit-text-stroke: 3px rgb(255, 255, 255);
+}
+
+
+/* section1 (introduce) */
+#section1 {
+  width: 90%;
+  margin: 0 auto;
+  color: #DDDDDD;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8em 0;
+}
+
+.line-text {
+  opacity: 0;
+  transform: translateY(30px);
+  /* 아래로 떨어져 있는 상태 */
+  transition: opacity 1s ease, transform 1s ease;
+  /* 부드러운 애니메이션 */
+}
+
+/* 애니메이션이 적용될 때의 상태 */
+.line-text.animate {
+  opacity: 1;
+  transform: translateY(0);
+  /* 원위치로 올라오기 */
+}
+
+.with {
+  animation-delay: 0s;
+}
+
+.immersive {
+  animation-delay: 0.2s;
+}
+
+.lightning {
+  animation-delay: 0.4s;
+}
+
+.star {
+  animation-delay: 0.6s;
+}
+
+.sound {
+  animation-delay: 0.8s;
+}
+
+.cosmic {
+  animation-delay: 1s;
+}
+
+.journey {
+  animation-delay: 1.2s;
+}
+
+.beyond {
+  animation-delay: 1.4s;
+}
+
+.arrow {
+  animation-delay: 1.4s;
+}
+
+.introduce_icon2 {
+  animation-delay: 1.6s;
+}
+
+.imagination {
+  animation-delay: 1.8s;
+}
+
+.pc_text,
+.m_text {
+  animation-delay: 2s;
+}
+
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* 원위치로 올라오기 */
+  }
+}
+
+.m_introduce {
+  display: none;
+}
+
+.introduce_line {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+.introduce_img {
+  display: block;
+  margin: 0 1.5em;
+  height: clamp(45px, 4vw, 93px);
+}
+
+.introduce_img2 {
+  display: block;
+  margin-right: 1.5em;
+  height: clamp(45px, 4vw, 93px);
+}
+
+.introduce_icon {
+  margin-left: 1.3em;
+  height: clamp(40px, 4vw, 80px);
+}
+
+.introduce_icon2 {
+  margin: 0 1.3em;
+  height: clamp(40px, 4vw, 80px);
+}
+
+.introduce_line p {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(27px, 3vw, 50px);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.introduce_text {
+  text-align: center;
+  padding-top: 6em;
+  line-height: 1.7em;
+  font-size: clamp(14px, 2vw, 22px);
+}
+
+.pc_text {
+  display: block;
+}
+
+.m_text {
+  display: none;
+}
+
+
+/* exhibition_section2 */
+#section2 {
+  height: 430vh;
+}
+
+.section2_title_wrap {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Orbitron", sans-serif;
+}
+
+.current_exhibition_title {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: clamp(45px, 6vw, 80px);
+  font-weight: 600;
+  line-height: 3em;
+  color: #d9d9d9;
+}
+
+.more_btn {
+  width: 7.5em;
+  height: 2.3em;
+  font-size: clamp(16px, 2vw, 25px);
+  font-weight: 400;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.more_btn:hover {
+  background: linear-gradient(to right, #A94796, #504697);
+  border: 0;
+}
+
+.more_btn img {
+  display: block;
+  padding-left: 0.6em;
+  width: clamp(12px, 2vw, 20px);
+}
+
+.outline_text2 {
+  color: transparent;
+  -webkit-text-stroke: 2px #d9d9d9;
+  padding-right: 0.3em;
+}
+
+.top_tit {
+  display: block;
+}
+
+.m_top_tit {
+  display: none;
+}
+
+.exhibition_list {
+  height: 100vh;
+}
+
+.exhibition_list .panel {
+  position: relative;
+  height: 100vh;
+  transition: opacity ease .3s;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.exhibition_list .panel.last {
+  position: relative;
+  z-index: 1;
+}
+
+.exhibition_list .prj-head>.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 75%;
+  justify-content: space-between;
+}
+
+.exhibition_list .tit {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.exhibition_list .top_tit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.exhibition_list .tit .name {
+  font-size: clamp(45px, 6vw, 80px);
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  line-height: 0.8em;
+}
+
+.exhibition_list .tit .name_sub {
+  font-family: 'Kdam Thmor Pro';
+  font-size: clamp(22px, 4vw, 45px);
+  padding-left: 0.2em;
+  line-height: 2em;
+}
+
+.exhibition_list .tit .number {
+  font-family: 'Kdam Thmor Pro';
+  font-size: clamp(20px, 6vw, 70px);
+  padding-left: 0.2em;
+  line-height: 0.9em;
+}
+
+.exhibition_list .m_ko_name {
+  display: none;
+}
+
+.exhibition_list .tit .exhibition_text {
+  line-height: 1.6em;
+  font-size: clamp(12px, 2.3vw, 22px);
+}
+
+.exhibition_list .prj-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.exhibition_list .prj-image>img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+  transition: all ease .6s;
+}
+
+.exhibition_list .panel.hide:before {
+  opacity: 1;
+}
+
+.exhibition_list .panel.hide .prj-head {
+  transform: scale(.95) translateY(15%);
+}
+
+.exhibition_list .panel.hide .prj-image img {
+  transform: scale(1)
+}
+
+
+/* section3 */
+#section3 {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#visit {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: 200vh;
+}
+
+#m_visit {
+  display: none;
+}
+
+.tap_name {
+  width: 50%;
+  height: 600px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding-top: 8%;
+}
+
+.visit_tap {
+  padding: 10vh 0 25vh;
+}
+
+.visit_tap div {
+  display: flex;
+  font-size: clamp(12px, 2.3vw, 30px);
+  font-family: 'Kdam Thmor Pro';
+  color: #cbcbcb;
+  padding-bottom: 0.4em;
+}
+
+.visit_tap div p {
+  padding-top: 0.3em;
+  cursor: pointer;
+}
+
+.visit_tap span {
+  display: block;
+  font-size: clamp(3px, 3vw, 15px);
+  padding-left: 0.7em;
+}
+
+.visit_astrarume_title {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(27px, 6vw, 80px);
+  font-weight: 600;
+  line-height: 1em;
+  color: #d9d9d9;
+}
+
+.ticket_btn {
+  width: 10em;
+  height: 2.3em;
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(16px, 2vw, 25px);
+  font-weight: 400;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.ticket_btn:hover {
+  background: linear-gradient(to right, #A94796, #504697);
+  border: 0;
+}
+
+.ticket_btn img {
+  display: block;
+  padding-left: 0.6em;
+  width: clamp(12px, 2vw, 20px);
+}
+
+.aside {
+  width: 50%;
+  padding-top: 9%;
+  font-size: clamp(10px, 2.3vw, 22px);
+}
+
+.book_tickets {
+  color: #CBCBCB;
+  font-size: clamp(14px, 2.3vw, 22px);
+}
+
+.line {
+  width: 100%;
+  height: 0.01em;
+  background-color: #B9B9B9;
+  margin: 5% 0;
+}
+
+.visit_sub {
+  font-size: clamp(20px, 1.6vw, 27px);
+}
+
+
+.ticket_price_wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-top: 4%;
+}
+
+.ticket_price {
+  height: 270px;
+  width: 215px;
+  background: url(../images/ticket_box.png) no-repeat center;
+  text-align: center;
+  position: relative;
+}
+
+.group {
+  padding-top: 2.5em;
+}
+
+.price {
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sale {
+  padding-top: 1em;
+  color: #949494;
+}
+
+
+/* faq */
+.faq {
+  width: 100%;
+  margin-top: 11vw;
+  border-top: 1px #B9B9B9 solid;
+}
+
+.faq>ul>li {
+  border-bottom: 1px #B9B9B9 solid;
+}
+
+.question {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em 0 0;
+}
+
+.question p {
+  width: 90%;
+  color: #CBCBCB;
+}
+
+.question {
+  margin-bottom: 1.5em;
+  transition: margin-bottom 0.3s ease-in-out;
+}
+
+.question.open {
+  margin-bottom: 0;
+}
+
+.question span {
+  display: flex;
+}
+
+.question span img {
+  transition: all 0.5s;
+  width: clamp(12px, 5vw, 27px);
+}
+
+.turn {
+  transform: rotate(45deg);
+}
+
+.anser {
+  font-size: clamp(14px, 2.3vw, 22px);
+  color: #6F6F6F;
+  font-weight: 400;
+  padding: 0.6em 0 1.1em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.anser p {
+  width: 95%;
+}
+
+
+/* section4 */
+#section4 {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 40vh;
+}
+
+.partners_title {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(45px, 6vw, 80px);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1em;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@keyframes flow_left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes flow_right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.partners {
+  width: 100%;
+  color: #fff;
+  padding: 9vh 0 11vh;
+}
+
+.partners_flow {
+  white-space: nowrap;
+  padding: 2.5% 0;
+}
+
+.partners_flow img {
+  padding: 0 2%;
+  height: clamp(20px, 3vw, 53px);
+}
+
+.left {
+  animation: flow_left 20s linear infinite;
+}
+
+.right {
+  animation: flow_right 20s linear infinite;
+}
+
+.flow_line {
+  width: 100%;
+  height: 0.01em;
+  background-color: #B9B9B9;
+}
+
+
+/* section5 */
+#section5 {
+  margin: auto;
+  overflow: hidden;
+  padding-top: 10em;
+}
+
+.branches {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 9vh 0 7vh;
+}
+
+.branch {
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: rgb(255, 255, 255, 0.5);
+  transition: color 0.3s ease;
+}
+
+.branch img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.branch span {
+  font-size: clamp(17px, 2vw, 60px);
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  display: block;
+}
+
+.branch_name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.branch_name img {
+  width: clamp(10px, 2vw, 70px);
+  padding-left: 0.5em;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.branch:hover {
+  color: rgb(255, 255, 255, 1);
+}
+
+.branch:hover .branch_name img {
+  opacity: 1;
+}
+
+
+/* buy ticket button */
+.buy_ticket {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(25px, 8vw, 138px);
+  font-weight: 500;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.buy_ticket {
+  cursor: pointer;
+}
+
+.buy_ticket img {
+  display: block;
+  width: clamp(20px, 6vw, 90px);
+  height: 100%;
+  padding-left: 0.5em;
+}
+
+.buy_ticket_line {
+  width: 90%;
+  margin: 4.5% auto;
+  height: 0.01em;
+  background-color: #B9B9B9;
+}
+
+.buy_ticket img {
+  opacity: 0;
+  /* 처음엔 이미지가 보이지 않음 */
+  transform: rotate(45deg);
+  /* 회전하지 않음 */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* 부드러운 전환 효과 */
+}
+
+.buy_ticket:hover img {
+  opacity: 1;
+  /* 호버 시 이미지가 보이도록 */
+  transform: rotate(0deg);
+  /* 이미지가 180도 회전 */
+}
+
+
+/* footer */
+#footer {
+  width: 90%;
+  margin: 0 auto;
+  color: #CBCBCB;
+  font-size: clamp(15px, 2vw, 24px);
+  line-height: 1.6em;
+}
+
+.footer_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info_text {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu ul li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu>p {
+  margin-right: 3em;
+  padding-bottom: 2em;
+}
+
+.menu img {
+  display: block;
+  width: clamp(8px, 2vw, 17px);
+  height: 100%;
+  margin-left: 0.2em;
+}
+
+.menu ul li img {
+  opacity: 0;
+  /* 처음엔 이미지가 보이지 않음 */
+  transform: rotate(45deg);
+  /* 회전하지 않음 */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* 부드러운 전환 효과 */
+}
+
+.menu ul li:hover img {
+  opacity: 1;
+  /* 호버 시 이미지가 보이도록 */
+  transform: rotate(0deg);
+  /* 이미지가 180도 회전 */
+}
+
+.contacts {
+  padding: 0 5em;
+}
+
+.contacts>p {
+  margin-right: 3em;
+  padding-bottom: 2em;
+
+}
+
+.sns>p {
+  margin-right: 2em;
+}
+
+.sns ul {
+  display: flex;
+}
+
+.sns img {
+  display: block;
+  width: clamp(60px, 3vw, 77px);
+  opacity: 0.5;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* 부드러운 전환 효과 */
+  cursor: pointer;
+}
+
+.sns img:hover {
+  opacity: 1;
+}
+
+.footer_logo {
+  display: flex;
+  justify-content: space-between;
+  margin: 8em 0 2em 0;
+  align-items: flex-end;
+  font-size: clamp(8px, 1.7vw, 20px);
+}
+
+.footer_logo a img {
+  display: block;
+  width: clamp(285px, 15vw, 357px);
+}
+
+
+/* tablet */
+@media (max-width:1787px) {
+
+  #header {
+    width: 90%;
+  }
+
+  .inner_banner {
+    width: 100%;
+  }
+
+  .get_ticket {
+    width: 100%;
+  }
+
+  .introduce_img {
+    margin: 0 1em;
+  }
+
+  .introduce_img2 {
+    display: block;
+    margin-right: 1em;
+  }
+
+  .introduce_icon {
+    margin-left: 1em;
+  }
+
+  .introduce_icon2 {
+    margin: 0 1em;
+  }
+
+  .outline_text2 {
+    -webkit-text-stroke: 1px #d9d9d9;
+  }
+
+}
+
+@media (max-width:1600px) {
+  .line {
+    display: none;
+  }
+
+  .open_time_padding {
+    padding-bottom: 8%;
+  }
+
+  .open_time_padding br {
+    display: none;
+  }
+
+  .ticket_price_wrap {
+    margin-bottom: 10%;
+  }
+
+  .birth {
+    font-size: clamp(10px, 5vw, 20px);
+  }
+
+}
+
+@media (max-width:1500px) {
+  .section2_title_wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 8%;
+  }
+
+  .current_exhibition_title {
+    display: flex;
+    line-height: 0.8em;
+  }
+
+  .more_btn {
+    margin-top: 5%;
+  }
+
+}
+
+@media (max-width:1383px) {
+  .main_slogan {
+    flex-wrap: wrap;
+    padding: 1% 0 2% 0;
+  }
+
+  .main_slogan p {
+    font-size: clamp(47px, 11.4vw, 102px);
+    line-height: 0.7em;
+  }
+
+  .main_slogan p:nth-child(1) {
+    padding-right: 63%;
+  }
+
+  .main_slogan p:nth-child(2) {
+    padding-left: 11%;
+  }
+
+  .main_slogan p:nth-child(3) {
+    padding-left: 74%;
+  }
+
+  .introduce_img {
+    margin: 0 0.8em;
+  }
+
+  .introduce_img2 {
+    display: block;
+    margin-right: 0.8em;
+  }
+
+  .introduce_icon {
+    margin-left: 0.5em;
+  }
+
+  .introduce_icon2 {
+    margin: 0 0.5em;
+  }
+
+  .ticket_price_wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+  }
+
+
+  .ticket_price {
+    padding-bottom: 2%;
+  }
+
+  /* section3 */
+  #visit {
+    display: none;
+  }
+
+  #m_visit {
+    display: block;
+    margin-top: 8em;
+  }
+
+  .visit_astrarume_title {
+    text-align: start;
+  }
+
+  .m_visit_tit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10%;
+  }
+
+  .ticket_btn {
+    margin-top: 2em;
+  }
+
+  .m_visit_tap {
+    padding: 10vh 0 4vh 0;
+    display: flex;
+  }
+
+  #m_visit .m_visit_tap {
+    position: sticky;
+    top: 12%;
+    background-color: #0d0d0d;
+    z-index: 10;
+    padding: 0;
+    margin: 7vh 0 4vh 0;
+  }
+
+
+  .m_visit_tap div {
+    display: flex;
+    justify-content: center;
+    font-size: clamp(16px, 5vw, 23px);
+    width: 50%;
+    border-bottom: 1px solid #3F3F3F;
+    /* 기본 색상 */
+    font-family: 'Kdam Thmor Pro';
+    padding-bottom: 2%;
+    margin-bottom: 3%;
+    color: #3F3F3F;
+    transition: all 0.3s ease-in-out;
+  }
+
+
+  #m_visit .tap_item {
+    cursor: pointer;
+    /* 버튼처럼 보이게 */
+    border-bottom: 1px solid #3F3F3F;
+    /* 기본 색상 */
+    transition: border-color 0.3s, color 0.3s;
+    /* 색상과 선 변화가 부드럽게 */
+  }
+
+  /* 버튼이 활성화됐을 때 */
+  #m_visit .tap_item.active {
+    color: #fff;
+    /* 글자색을 흰색으로 */
+    border-bottom: 2px solid #fff;
+    /* 아래 선을 흰색으로 */
+  }
+
+
+  .m_visit_tap div p {
+    padding-top: 3.5%;
+  }
+
+  .m_visit_tap span {
+    display: block;
+    font-size: clamp(7px, 1vw, 15px);
+    padding-left: 0.7em;
+  }
+
+  .visit_astrarume_title {
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(45px, 6vw, 80px);
+    font-weight: 600;
+    color: #fff;
+    line-height: 1em;
+  }
+
+  .book_tickets {
+    color: #CBCBCB;
+    line-height: 1.8em;
+  }
+
+  .open_time {
+    padding-top: 15%;
+    text-align: center;
+  }
+
+  .line {
+    width: 100%;
+    height: 0.01em;
+    background-color: #B9B9B9;
+    margin: 6% 0;
+  }
+
+  .ticket_price_wrap {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    flex-wrap: nowrap;
+    margin-top: 4%;
+  }
+
+  .bottom_gap {
+    margin-bottom: 2%;
+  }
+
+  .group {
+    padding-top: 3em;
+  }
+
+  .price {
+    padding-top: 3.6em;
+  }
+
+  .sale {
+    padding-top: 1em;
+    color: #949494;
+  }
+
+  .anser {
+    line-height: 1.5em;
+    padding-bottom: 2em;
+  }
+
+  #section4 {
+    padding-top: 12vh;
+  }
+
+  #section5 {
+    padding-top: 3vh;
+  }
+
+}
+
+@media (max-width:1293px) {
+  .main_slogan p {
+    line-height: 0.8em;
+  }
+
+  .main_slogan p:nth-child(1) {
+    padding-right: 50%;
+  }
+
+  .main_slogan p:nth-child(2) {
+    padding-left: 5%;
+  }
+
+  .main_slogan p:nth-child(3) {
+    padding-left: 63%;
+  }
+}
+
+@media (max-width:996px) {
+  .main_slogan {
+    flex-wrap: wrap;
+  }
+
+  .main_slogan p {
+    line-height: 0.9em;
+  }
+
+  .main_slogan {
+    display: flex;
+  }
+
+  .main_slogan p:nth-child(1) {
+    padding-right: 44%;
+  }
+
+  .main_slogan p:nth-child(3) {
+    padding-left: 60%;
+  }
+
+  .outline_text {
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+  }
+}
+
+@media (max-width:873px) {
+  .introduce_img {
+    margin: 0 0.6em;
+  }
+
+  .introduce_img2 {
+    margin-right: 0.6em;
+  }
+
+  .introduce_icon {
+    margin-left: 0.5em;
+  }
+
+  .introduce_icon2 {
+    margin: 0 0.5em;
+  }
+}
+
+@media (max-width:847px) {
+  #section1 {
+    width: 90%;
+    margin: 0 auto;
+    color: #DDDDDD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8em 0;
+  }
+
+  .pc_introduce {
+    display: none;
+  }
+
+  .m_introduce {
+    display: block;
+  }
+
+  .introduce_icon {
+    margin-left: 0.2em;
+    height: clamp(40px, 4vw, 80px);
+  }
+
+  .introduce_icon2 {
+    margin: 0 0.6em 0 0;
+    height: clamp(40px, 4vw, 80px);
+  }
+
+  .introduce_icon3 {
+    margin: 0 0.3em;
+    height: clamp(40px, 4vw, 80px);
+  }
+
+  .introduce_line {
+    margin-top: 0.9em;
+  }
+
+  .introduce_line p {
+    font-size: clamp(26px, 2vw, 30px);
+  }
+
+  .introduce_img {
+    margin: 0 1em;
+    height: clamp(45px, 4vw, 93px);
+  }
+
+  .introduce_img2 {
+    margin-right: 1em;
+    height: clamp(45px, 4vw, 93px);
+  }
+
+  .img2 {
+    margin-left: 0;
+  }
+
+  .img3 {
+    margin-left: 1em;
+  }
+
+}
+
+
+@media (max-width:825px) {
+  #header {
+    padding: 0 5%;
+  }
+
+  .get_ticket {
+    font-size: clamp(20px, 2vw, 30px);
+  }
+
+  #header .mobile_gnb {
+    display: block;
+  }
+
+  #header .inner_header {
+    display: none;
+  }
+
+  .hamburger,
+  .x {
+    width: clamp(22px, 3vw, 25px);
+  }
+
+
+  /* side menu */
+  #m_menu_wrap {
+    background-color: rgb(13, 13, 13, 0.6);
+    backdrop-filter: blur(10px);
+    color: #EAEAEA;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 5%;
+    margin-left: 100vw;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .mobile_gnb {
+    padding: 5% 0 5% 0;
+  }
+
+  .mobile_gnb {
+    background-color: transparent;
+    /* 기본 배경 투명 */
+    transition: background-color 0.3s ease;
+    /* 배경색 전환 효과 */
+  }
+
+  /* scrolled 클래스가 추가되었을 때 배경색을 변경 */
+  .mobile_gnb.scrolled {
+    background-color: #0d0d0d;
+    /* 원하는 배경색 */
+  }
+
+  .m_menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .m_btn {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .m_btn img {
+    display: block;
+  }
+
+  .close_btn {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .close_btn img {
+    display: none;
+    /* X 버튼은 기본적으로 숨김 */
+  }
+
+  .hamburger {
+    cursor: pointer;
+  }
+
+  .x {
+    cursor: pointer;
+  }
+
+  #m_menu.open+.m_btn img {
+    display: none;
+    /* 메뉴가 열리면 햄버거 버튼 숨김 */
+  }
+
+  #m_menu.open+.m_btn+.close_btn img {
+    display: block;
+    /* X 버튼이 나타남 */
+  }
+
+
+  .m_gnb {
+    padding-top: 24vh;
+    font-size: clamp(38px, 5vw, 55px);
+    line-height: 1.6em;
+    cursor: pointer;
+  }
+
+  .m_gnb li {
+    display: flex;
+    align-items: center;
+  }
+
+  .hover_line {
+    background-color: #EAEAEA;
+    width: 0;
+    /* 기본적으로 선의 너비를 0으로 설정 */
+    height: 0.1vh;
+    margin-right: 1.2%;
+    transition: width 0.3s ease;
+    /* 부드러운 애니메이션 */
+  }
+
+  .m_gnb li:hover .hover_line {
+    width: clamp(35px, 3vw, 44px);
+    /* 호버 시 선의 너비가 확장되도록 설정 */
+  }
+
+  .menu_ticket_btn_wrap {
+    cursor: pointer;
+  }
+
+  .submenu_line {
+    width: 100%;
+    height: 0.1vh;
+    background-color: #EAEAEA;
+  }
+
+  .menu_ticket_btn {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 0.4em;
+  }
+
+  .menu_ticket_btn p {
+    line-height: 1.1em;
+    font-size: clamp(37px, 7vw, 120px);
+  }
+
+  .menu_ticket_btn img {
+    display: block;
+    margin-bottom: 1.1%;
+    margin-left: 0.3em;
+    width: clamp(33px, 5vw, 101px);
+
+  }
+
+  .get_ticket {
+    margin-bottom: 17vh;
+  }
+
+}
+
+@media (max-width:741px) {
+  .ticket_price_wrap {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    flex-wrap: wrap;
+    margin-top: 4%;
+  }
+
+  .visit_sub {
+    font-size: clamp(20px, 1.6vw, 27px);
+  }
+
+  .ticket_price {
+    height: 270px;
+    width: 215px;
+    background: url(../images/ticket_box.png) no-repeat center;
+    text-align: center;
+    position: relative;
+  }
+
+  .group {
+    padding-top: 3.5em;
+  }
+
+}
+
+
+/* mobile */
+@media (max-width:700px) {
+
+  /* header */
+  #header {
+    width: 90%;
+  }
+
+  #header h1 a img {
+    display: block;
+    width: 80%;
+  }
+
+  /* banner */
+  .inner_banner {
+    width: 100%;
+    position: relative;
+  }
+
+  .main_slogan {
+    padding-bottom: 7%;
+    line-height: 1.3em;
+  }
+
+  .main_slogan p {
+    font-size: clamp(55px, 11.4vw, 102px);
+    line-height: 0.7em;
+  }
+
+  .outline_text {
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+  }
+
+  .introduce_line {
+    margin-top: 0.9em;
+  }
+
+  .introduce_line p {
+    font-size: clamp(14px, 3.3vw, 26px);
+  }
+
+  .introduce_img {
+    margin: 0 0.4em;
+    height: clamp(22px, 4vw, 60px);
+  }
+
+  .introduce_img2 {
+    margin-right: 0.6em;
+    height: clamp(22px, 4vw, 60px);
+  }
+
+  .img2 {
+    margin-left: 0;
+  }
+
+  .img3 {
+    margin-left: 0.5em;
+  }
+
+  .introduce_icon {
+    margin-left: 0.1em;
+    height: clamp(20px, 4vw, 40px);
+  }
+
+  .introduce_icon2 {
+    margin: 0 0.3em 0 0;
+    height: clamp(20px, 4vw, 40px);
+  }
+
+  .introduce_icon3 {
+    margin: 0 0.25em;
+    height: clamp(20px, 4vw, 40px);
+  }
+
+  /* exhibition */
+  .section2_title_wrap {
+    margin-bottom: 0;
+  }
+
+  .current_exhibition_title {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: clamp(45px, 6vw, 80px);
+    font-weight: 600;
+    line-height: 1.1em;
+    justify-content: center;
+  }
+
+  .outline_text2 {
+    padding-right: 0;
+  }
+
+  .space {
+    padding-right: 0.3em;
+  }
+
+  .section2_title_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .exhibition_list .panel {
+    position: relative;
+    height: 100vh;
+    background-color: #0D0D0D;
+    transition: opacity ease .3s;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .exhibition_list .prj-head>.wrap {
+    text-align: center;
+  }
+
+  .exhibition_list .tit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 98%;
+    justify-content: space-between;
+  }
+
+  .exhibition_list .top_tit {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0%;
+  }
+
+  .exhibition_list .tit .name {
+    font-size: clamp(35px, 6vw, 80px);
+    font-family: "Orbitron", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    line-height: 0.9em;
+    text-align: center;
+    padding-top: 15%;
+  }
+
+  .exhibition_list .tit .name_sub {
+    font-family: 'Kdam Thmor Pro';
+    font-size: clamp(16px, 4vw, 45px);
+    padding-left: 0.2em;
+    line-height: 2em;
+  }
+
+  .exhibition_list .tit .number {
+    padding-left: 0;
+    font-size: clamp(16px, 4vw, 20px);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .exhibition_list .m_ko_name {
+    display: block;
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 700;
+    line-height: 3.2em;
+    color: #fff;
+  }
+
+  .exhibition_list .tit .exhibition_text {
+    line-height: 1.7em;
+    font-size: clamp(14px, 3.5vw, 16px);
+    color: #cbcbcb;
+  }
+
+  .exhibition_list .prj-image {
+    position: absolute;
+    left: 0;
+    top: 28%;
+    width: 100%;
+    height: 40%;
+    z-index: -1;
+  }
+
+  .exhibition_list .prj-image>img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.05);
+    transition: all ease .6s;
+  }
+
+  .exhibition_list .panel.hide:before {
+    opacity: 1;
+  }
+
+  .exhibition_list .panel.hide .prj-head {
+    transform: scale(.95) translateY(15%);
+  }
+
+  .exhibition_list .panel.hide .prj-image img {
+    transform: scale(1)
+  }
+
+  #m_visit {
+    margin-top: 2em;
+  }
+
+  .m_visit_tap {
+    padding-top: 4em;
+  }
+
+  .partners_title {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: clamp(45px, 6vw, 80px);
+    font-weight: 600;
+    line-height: 1.1em;
+  }
+
+  .branches {
+    flex-wrap: wrap;
+  }
+
+  .branch {
+    color: rgb(255, 255, 255, 1);
+  }
+
+  .branch_name img {
+    opacity: 1;
+  }
+
+  .branch_name {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+  }
+
+  .branch_name img {
+    display: block;
+  }
+
+  /* footer */
+  #footer {
+    font-size: clamp(12px, 3vw, 22px);
+  }
+
+  .footer_info {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer_info p {
+    width: 40%;
+  }
+
+  .footer_info ul {
+    width: 60%;
+  }
+
+  .contacts ul li p {
+    width: 100%;
+  }
+
+  .info_text {
+    flex-wrap: nowrap;
+  }
+
+  .menu>p {
+    margin-right: 1em;
+    padding-bottom: 0;
+  }
+
+  .contacts {
+    padding: 2em 0;
+  }
+
+  .contacts>p {
+    margin-right: 1em;
+    padding-bottom: 0;
+  }
+
+  .sns>p {
+    margin-right: 0;
+  }
+
+  .sns ul {
+    display: flex;
+  }
+
+  .sns img {
+    display: block;
+    width: clamp(40px, 3vw, 77px);
+  }
+
+  .footer_logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 8em 0 2em 0;
+    align-items: flex-end;
+    font-size: clamp(8px, 1.7vw, 20px);
+  }
+
+  .footer_logo a img {
+    display: block;
+    width: clamp(120px, 15vw, 357px);
+  }
+
+  .buy_ticket img {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+
+@media (max-width:690px) {
+  .exhibition_text br {
+    display: none;
+  }
+}
+
+
+@media (max-width:600px) {
+  .introduce_text {
+    text-align: start;
+  }
+
+  .pc_text {
+    display: none;
+  }
+
+  .m_text {
+    display: block;
+  }
+
+  .exhibition_list .tit .exhibition_text {
+    font-size: clamp(14px, 2.3vw, 16px);
+  }
+
+  .get_ticket {
+    margin-bottom: 20vh;
+  }
+
+
+}
+
+@media (max-width:581px){
+#m_visit .m_visit_tap {
+        top: 9%;
+    }
+}
+
+@media (max-width:550px) {
+  .introduce_text {
+    text-align: start;
+  }
+
+  .pc_text {
+    display: none;
+  }
+
+  .m_text {
+    display: block;
+  }
+}
+
+@media (max-width:492px) {
+  .visit_sub {
+    font-size: clamp(16px, 2vw, 20px);
+  }
+
+
+  .ticket_price_wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 6%;
+  }
+
+  .ticket_price {
+    height: 200px;
+    width: 160px;
+    background: url(../images/ticket_box.png) no-repeat center;
+    background-size: contain;
+    text-align: center;
+    position: relative;
+  }
+
+  .group {
+    padding-top: 33%;
+  }
+
+  .price {
+    width: 100%;
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .sale {
+    padding-top: 1em;
+    color: #949494;
+  }
+
+  .birth {
+    font-size: clamp(14px, 2vw, 18px);
+  }
+
+  .question {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 0 0;
+  }
+
+  .question {
+    margin-bottom: 1em;
+  }
+
+}
+
+
+@media (max-width:461px) {
+  .main_slogan p {
+    line-height: 0.75em;
+  }
+
+  .main_slogan p:nth-child(1) {
+    padding-right: 35%;
+  }
+
+  .main_slogan p:nth-child(2) {
+    padding-left: 5%;
+  }
+
+  .main_slogan p:nth-child(3) {
+    padding-left: 50%;
+  }
+}
+
+@media (max-width:442px){
+#m_visit .m_visit_tap {
+        top: 8%;
+    }
+}
+
+@media (max-width:383px){
+#m_visit .m_visit_tap {
+        top: 7%;
+    }
+}
+
+
+@media (max-width:380px) {
+  .exhibition_list .prj-image {
+    top: 23%;
+  }
+
+  .exhibition_list .tit .exhibition_text {
+    text-align: start;
+  }
+
+  .m_ko_name {
+    text-align: center;
+  }
+
+  .main_slogan p {
+    line-height: 0.8em;
+  }
+
+  .main_slogan p:nth-child(1) {
+    padding-right: 30%;
+  }
+
+  .main_slogan p:nth-child(2) {
+    padding-left: 3%;
+  }
+
+  .main_slogan p:nth-child(3) {
+    padding-left: 50%;
+  }
+}

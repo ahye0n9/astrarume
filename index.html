@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AstraRume</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+  <!-- webfont -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anta&family=Kdam+Thmor+Pro&family=Ms+Madi&family=Noto+Sans+KR:wght@100..900&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- css -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+<body>
+  <div id="wrap">
+    <div id="header">
+      <div class="inner_header">
+        <h1>
+          <a href="index.html">
+            <img src="images/header_logo.svg" alt="logo" class="logo">
+          </a>
+        </h1>
+        <!-- pc버전 gnb -->
+        <div class="nav">
+          <ul class="gnb">
+            <li><a href="#">EXHIBITION</a></li>
+            <li><a href="#">VISIT</a></li>
+            <li><a href="#">BRANCHES</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- mobile버전 햄버거버튼 -->
+      <div class="mobile_gnb">
+        <div class="m_btn">
+          <a href="index.html">
+            <img src="images/header_logo.svg" alt="logo" class="logo">
+          </a>
+          <img src="images/hamburger_icon.svg" alt="hamberger_icon" class="hamburger">
+        </div>
+        <div id="m_menu_wrap">
+          <div class="m_menu">
+            <p class="close_btn">
+              <a href="index.html">
+                <img src="images/header_logo.svg" alt="logo" class="logo">
+              </a>
+              <img src="images/x_icon.svg" alt="x_icon" class="x">
+            </p>
+            <ul class="m_gnb">
+              <li>
+                <div class="hover_line"></div><a href="#" class="scroll-link" data-target="section2">Exhibition</a>
+              </li>
+              <li>
+                <div class="hover_line"></div><a href="#" class="scroll-link" data-target="section3">Visit</a>
+              </li>
+              <li>
+                <div class="hover_line"></div><a href="#" class="scroll-link" data-target="section5">Branches</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu_ticket_btn_wrap">
+            <div class="submenu_line"></div>
+            <div class="menu_ticket_btn">
+              <p>BUY TICKETS</p>
+              <img src="images/submenu_arrow.svg" alt="arrow">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="banner">
+      <div class="inner_banner">
+        <div class="get_ticket">
+          <img src="images/mainbanner_arrow.png" alt="arrow">
+          <div class="ticket_text">
+            <p class="get">&#10240&#10240&#10240GET</p>
+            <p class="your">YOUR</p>
+            <p class="ticket">TICKETS&#10240</p>
+          </div>
+        </div>
+        <div class="main_slogan">
+          <p class="slogan-text explore">Explore</p>
+          <p class="slogan-text beyond_title outline_text">Beyond</p>
+          <p class="slogan-text stars">Stars</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="section1">
+      <div class="pc_introduce">
+        <div class="introduce_line">
+          <p class="line-text with">With</p>
+          <img src="images/introduce1.jpg" alt="introduce" class="introduce_img">
+          <p class="line-text immersive">immersive visuals, dynamic</p>
+        </div>
+        <div class="introduce_line">
+          <p class="line-text lightning">lighting, and atmospheric</p>
+          <img src="images/introduce_icon1.png" alt="introduce" class="introduce_icon line-text star">
+          <img src="images/introduce2.jpg" alt="introduce" class="introduce_img">
+          <p class="line-text sound">sound,</p>
+        </div>
+        <div class="introduce_line">
+          <img src="images/introduce3.jpg" alt="introduce" class="introduce_img2">
+          <p class="line-text cosmic">AstraRume creates a cosmic</p>
+        </div>
+        <div class="introduce_line">
+          <p class="line-text journey">journey beyond</p>
+          <img src="images/introduce_icon2.png" alt="introduce" class="introduce_icon line-text arrow">
+          <img src="images/introduce_icon3.png" alt="introduce" class="introduce_icon2 line-text">
+          <p class="line-text imagination">imagination</p>
+          <img src="images/introduce4.jpg" alt="introduce" class="introduce_img">
+        </div>
+      </div>
+
+      <div class="m_introduce">
+        <div class="introduce_line">
+          <p class="line-text with">With</p>
+          <img src="images/introduce1.jpg" alt="introduce" class="introduce_img">
+          <p class="line-text immersive">immersive visuals, </p>
+        </div>
+        <div class="introduce_line">
+          <p class="line-text lightning">dynamic lighting, and atmospheric</p>
+          <img src="images/introduce_icon1.png" alt="introduce" class="introduce_icon line-text star">
+        </div>
+        <div class="introduce_line">
+          <img src="images/introduce2.jpg" alt="introduce" class="introduce_img img2">
+          <p class="line-text sound">sound, AstraRume creates</p>
+        </div>
+        <div class="introduce_line">
+          <p class="line-text cosmic"> a cosmic</p>
+          <img src="images/introduce3.jpg" alt="introduce" class="introduce_img2 img3">
+          <p class="line-text journey">journey </p>
+        </div>
+        <div class="introduce_line">
+          <p class="line-text beyond"> beyond</p>
+          <img src="images/introduce_icon2.png" alt="introduce" class="introduce_icon3 line-text arrow">
+          <img src="images/introduce_icon3.png" alt="introduce" class="introduce_icon2 line-text">
+          <p class="line-text imagination"> imagination</p>
+          <img src="images/introduce4.jpg" alt="introduce" class="introduce_img">
+        </div>
+      </div>
+      <div class="introduce_text">
+        <p class="pc_text line-text">
+          AstraRume은 몰입감 있는 비주얼, 역동적인 조명, 그리고 분위기 있는 사운드를 통해
+          <br>우주적 탐험과 신비로운 경험을 선사하는 미디어 아트 전시관입니다.
+        </p>
+        <p class="m_text line-text">
+          AstraRume은 몰입감 있는 비주얼, 역동적인 조명, 그리고 분위기 있는 사운드를 통해 우주적 탐험과 신비로운 경험을 선사하는 미디어 아트 전시관입니다.
+        </p>
+      </div>
+    </div>
+
+    <div id="section2">
+      <div class="section2_title_wrap">
+        <div class="current_exhibition_title">
+          <p class="outline_text2">CURRENT</p>
+          <p>EXHIBITION</p>
+        </div>
+        <div class="more_btn">
+          <p>MORE</p>
+          <img src="images/btn_arrow.png" alt="arrow">
+        </div>
+      </div>
+
+      <div class="exhibition_list">
+        <div class="panel js-pin">
+          <div class="prj-head">
+            <div class="wrap">
+              <div class="tit">
+                <div class="top_tit" data-aos="fade-up" data-aos-delay="50">
+                  <div class="name_left">
+                    <p class="name">Volcanic:</p>
+                    <p class="name_sub">A Force of Dynamic Energy</p>
+                  </div>
+                  <p class="number">01</p>
+                </div>
+
+                <p class="exhibition_text">
+                  <span class="m_ko_name">역동의 볼캐닉</span>
+                  미지의 화산 대지를 거닐며, 붉게 꿈틀거리는 용암과 신비로운 생태계를 마주합니다.
+                  <br>뜨겁게 살아 숨 쉬는 화산의 숨결 속에서, 용암의 흐름과 대지의 맥동을 온몸으로 느껴보세요.
+                  <br>불의 리듬 속에서 자연의 강렬한 에너지를 경험할 시간입니다.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="prj-image">
+            <img src="images/current_exhibition1.jpg" alt="current_exhibition">
+          </div>
+        </div>
+        <div class="panel js-pin">
+          <div class="prj-head">
+            <div class="wrap">
+              <div class="tit">
+                <div class="top_tit" data-aos="fade-up" data-aos-delay="50">
+                  <div class="name_left">
+                    <p class="name">Wormhole:</p>
+                    <p class="name_sub">A Spacetime-twisting Gateway</p>
+                  </div>
+                  <p class="number">02</p>
+                </div>
+                <p class="exhibition_text">
+                  <span class="m_ko_name">시공간이 뒤틀리는 웜홀</span>
+                  도착지를 예측할 수 없는 웜홀을 통과하면, 시공간의 법칙이 뒤틀리며 새로운 세계가 열립니다.
+                  <br>빛과 중력이 소용돌이치는 균열 속에서, 감각이 왜곡되고 시간의 흐름이 뒤엉킵니다.
+                  <br>당신은 과거도 미래도 아닌 미지의 차원에 도달하게 될 것입니다.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="prj-image">
+            <img src="images/current_exhibition2.jpg" alt="current_exhibition">
+          </div>
+        </div>
+        <div class="panel last">
+          <div class="prj-head">
+            <div class="wrap">
+              <div class="tit">
+                <div class="top_tit" data-aos="fade-up" data-aos-delay="50">
+                  <div class="name_left">
+                    <p class="name">Parallel Universe:</p>
+                    <p class="name_sub">Infinite Possibillities of the Cosmos</p>
+                  </div>
+                  <p class="number">03</p>
+                </div>
+                <p class="exhibition_text">
+                  <span class="m_ko_name">무한한 우주의 가능성, 평행우주</span>
+                  끊임없이 확장되는 무한한 세계 속, 서로 다른 가능성이 공존하는 평행우주를 탐험하세요.
+                  <br>겹쳐지고 분기하는 차원 속에서, 또 다른 나와 또 다른 현실이 존재하고 있습니다.
+                  <br>우리가 아는 세계 너머에는 얼마나 많은 가능성이 펼쳐져 있을까요?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="prj-image">
+            <img src="images/current_exhibition3.jpg" alt="current_exhibition">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="section3">
+      <div id="visit">
+        <div class="tap_name">
+          <div class="visit_astrarume_title">
+            <p>VISIT</p>
+            <p class="outline_text2">AstraRume</p>
+          </div>
+          <div class="visit_tap">
+            <div>
+              <p>Book Tickets</p><span>01</span>
+            </div>
+            <div>
+              <p>FAQ</p><span>02</span>
+            </div>
+          </div>
+          <div class="ticket_btn">
+            <p>BUY TICKETS</p>
+            <img src="images/btn_arrow.png" alt="arrow">
+          </div>
+        </div>
+        <div class="aside">
+          <div class="book_tickets">
+            <p class="open_time_padding">전시 티켓은 인터파크, 네이버, 카카오 등 온라인 예매와 현장 구매가 가능합니다.
+              <br>예매 시 주의사항과 규정은 아래를 참고해 주십시오.
+            </p>
+            <div class="line"></div>
+            <p class="visit_sub">
+              연중무휴 10:00 - 20:00 (입장 마감 19:00)
+            </p>
+            <div class="ticket_price_wrap">
+              <div class="ticket_price">
+                <p class="visit_sub group">
+                  성인
+                <p class="birth">(1962~2006년생)</p>
+                </p>
+                <p class="visit_sub price">
+                  19,000원
+                </p>
+              </div>
+              <div class="ticket_price">
+                <p class="visit_sub group">
+                  청소년
+                <p class="birth">(2007~2012년생)</p>
+                </p>
+                <p class="visit_sub price">
+                  15,000원
+                </p>
+              </div>
+              <div class="ticket_price">
+                <p class="visit_sub group">
+                  어린이
+                <p class="birth">(2013~2018년생)</p>
+                </p>
+                <p class="visit_sub price">
+                  12,000원
+                </p>
+              </div>
+              <div class="ticket_price">
+                <p class="visit_sub group">
+                  유아
+                <p class="birth">(2022년 이후 출생)</p>
+                </p>
+                <p class="visit_sub price">
+                  무료
+                </p>
+              </div>
+            </div>
+            <div class="line"></div>
+            <p class="visit_sub">
+              할인 및 추가 안내
+            </p>
+            <ul class="sale">
+              <li>- 장애인 복지 할인: 동반 1인까지 적용 (복지카드 필수, 중복 할인 불가)</li>
+              <li>- 기타 할인 대상자: 본인만 할인 적용 (동반 할인 및 중복 할인 불가)</li>
+              <li>- AstraRume CAFE 이용: 전시 티켓만 구매 시, TEA 1잔당 4,000원 별도 이용료 발생</li>
+              <li>- 단체 할인: 20인 이상 단체는 각 요금에서 2,000원 할인</li>
+              <li>- 증빙서류 필수: 할인 요금 대상자는 신분증 및 증빙서류 지참 필수</li>
+            </ul>
+          </div>
+          <div class="faq">
+            <ul>
+              <li>
+                <div class="question">
+                  <p class="visit_sub">전시 재입장이 가능한가요?</p>
+                  <span>
+                    <img src="images/faq_plus_icon.png" alt="key">
+                  </span>
+                </div>
+                <div class="anser">
+                  <p>
+                    전시장에서 퇴장 후 재입장은 불가합니다.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <p class="visit_sub">관람하는 데에 얼마나 소요되나요?</p>
+                  <span>
+                    <img src="images/faq_plus_icon.png" alt="key">
+                  </span>
+                </div>
+                <div class="anser">
+                  <p>
+                    작품들을 빠르게 관람하시는 분들은 1시간 내외, 여유롭게 감상하시며 사진촬영 등을 즐기시는 분들은 평균 2시간 정도 관람하십니다.
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <p class="visit_sub">온라인 티켓이 매진인데 현장구입 가능한가요?</p>
+                  <span>
+                    <img src="images/faq_plus_icon.png" alt="key">
+                  </span>
+                </div>
+                <div class="anser">
+                  <p>
+                    현장 구입 가능합니다. 하지만 현장 상황에 따라 조기 매진되거나, 입장에 대기가 발생할 수 있는 점 양해바랍니다.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <p class="visit_sub">전시장 내부에서 사진 촬영이 가능한가요?</p>
+                  <span>
+                    <img src="images/faq_plus_icon.png" alt="key">
+                  </span>
+                </div>
+                <div class="anser">
+                  <p>
+                    네. 전시장 내부 사진 및 짧은 영상 촬영 가능합니다.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <p class="visit_sub">방문하기에 가장 좋은 시간은 언제인가요?</p>
+                  <span>
+                    <img src="images/faq_plus_icon.png" alt="key">
+                  </span>
+                </div>
+                <div class="anser">
+                  <p>
+                    오후 1~5시에는 붐비는 편입니다. 오전시간 또는 오후 6시 이후에 오시면 더욱 쾌적하게 관람하실 수 있습니다.
+                </div>
+              </li>
+              <li>
+                <div class="question">
+                  <p class="visit_sub">전시장 내부에 식음료 반입이 가능한가요?</p>
+                  <span>
+                    <img src="images/faq_plus_icon.png" alt="key">
+                  </span>
+                </div>
+                <div class="anser">
+                  <p>
+                    네. 전시 관람에 방해가 되는 식사류 외에 간단한 스낵류와 음료는 반입 가능합니다. 쓰레기는 꼭 전시장 밖의 휴지통에 버려주세요.
+                  </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="m_visit">
+        <div class="m_visit_tit">
+          <div class="visit_astrarume_title">
+            <p>VISIT</p>
+            <p class="outline_text2">AstraRume</p>
+          </div>
+          <div class="ticket_btn">
+            <p>BUY TICKETS</p>
+            <img src="images/btn_arrow.png" alt="arrow">
+          </div>
+        </div>
+        <div class="m_visit_tap">
+          <!-- Book Tickets 버튼 -->
+          <div class="tap_item" data-target="book_tickets">
+            <p>Book Tickets</p><span>01</span>
+          </div>
+
+          <!-- FAQ 버튼 -->
+          <div class="tap_item" data-target="faq">
+            <p>FAQ</p><span>02</span>
+          </div>
+        </div>
+        <div class="book_tickets">
+          <p>전시 티켓은 인터파크, 네이버, 카카오 등 온라인 예매와 현장 구매가 가능합니다.
+            <br>예매 시 주의사항과 규정은 아래를 참고해 주십시오.
+          </p>
+          <p class="visit_sub open_time">
+            연중무휴 10:00 - 20:00 (입장 마감 19:00)
+          </p>
+          <div class="ticket_price_wrap">
+            <div class="ticket_price bottom_gap">
+              <p class="visit_sub group">
+                성인
+              <p class="birth">(1962~2006년생)</p>
+              </p>
+              <p class="visit_sub price">
+                19,000원
+              </p>
+            </div>
+            <div class="ticket_price bottom_gap">
+              <p class="visit_sub group">
+                청소년
+              <p class="birth">(2007~2012년생)</p>
+              </p>
+              <p class="visit_sub price">
+                15,000원
+              </p>
+            </div>
+            <div class="ticket_price">
+              <p class="visit_sub group">
+                어린이
+              <p class="birth">(2013~2018년생)</p>
+              </p>
+              <p class="visit_sub price">
+                12,000원
+              </p>
+            </div>
+            <div class="ticket_price">
+              <p class="visit_sub group">
+                유아
+              <p class="birth">(2022년 이후 출생)</p>
+              </p>
+              <p class="visit_sub price">
+                무료
+              </p>
+            </div>
+          </div>
+          <div class="line"></div>
+          <p class="visit_sub">
+            할인 및 추가 안내
+          </p>
+          <ul class="sale">
+            <li>- 장애인 복지 할인: 동반 1인까지 적용 (복지카드 필수, 중복 할인 불가)</li>
+            <li>- 기타 할인 대상자: 본인만 할인 적용 (동반 할인 및 중복 할인 불가)</li>
+            <li>- AstraRume CAFE 이용: 전시 티켓만 구매 시, TEA 1잔당 4,000원 별도 이용료 발생</li>
+            <li>- 단체 할인: 20인 이상 단체는 각 요금에서 2,000원 할인</li>
+            <li>- 증빙서류 필수: 할인 요금 대상자는 신분증 및 증빙서류 지참 필수</li>
+          </ul>
+        </div>
+        <div class="faq">
+          <ul>
+            <li>
+              <div class="question">
+                <p class="visit_sub">전시 재입장이 가능한가요?</p>
+                <span>
+                  <img src="images/faq_plus_icon.png" alt="key">
+                </span>
+              </div>
+              <div class="anser">
+                <p>
+                  전시장에서 퇴장 후 재입장은 불가합니다.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="question">
+                <p class="visit_sub">관람하는 데에 얼마나 소요되나요?</p>
+                <span>
+                  <img src="images/faq_plus_icon.png" alt="key">
+                </span>
+              </div>
+              <div class="anser">
+                <p>
+                  작품들을 빠르게 관람하시는 분들은 1시간 내외, 여유롭게 감상하시며 사진촬영 등을 즐기시는 분들은 평균 2시간 정도 관람하십니다.
+              </div>
+            </li>
+            <li>
+              <div class="question">
+                <p class="visit_sub">온라인 티켓이 매진인데 현장구입 가능한가요?</p>
+                <span>
+                  <img src="images/faq_plus_icon.png" alt="key">
+                </span>
+              </div>
+              <div class="anser">
+                <p>
+                  현장 구입 가능합니다. 하지만 현장 상황에 따라 조기 매진되거나, 입장에 대기가 발생할 수 있는 점 양해바랍니다.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="question">
+                <p class="visit_sub">전시장 내부에서 사진 촬영이 가능한가요?</p>
+                <span>
+                  <img src="images/faq_plus_icon.png" alt="key">
+                </span>
+              </div>
+              <div class="anser">
+                <p>
+                  네. 전시장 내부 사진 및 짧은 영상 촬영 가능합니다.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="question">
+                <p class="visit_sub">방문하기에 가장 좋은 시간은 언제인가요?</p>
+                <span>
+                  <img src="images/faq_plus_icon.png" alt="key">
+                </span>
+              </div>
+              <div class="anser">
+                <p>
+                  오후 1~5시에는 붐비는 편입니다. 오전시간 또는 오후 6시 이후에 오시면 더욱 쾌적하게 관람하실 수 있습니다.
+              </div>
+            </li>
+            <li>
+              <div class="question">
+                <p class="visit_sub">전시장 내부에 식음료 반입이 가능한가요?</p>
+                <span>
+                  <img src="images/faq_plus_icon.png" alt="key">
+                </span>
+              </div>
+              <div class="anser">
+                <p>
+                  네. 전시 관람에 방해가 되는 식사류 외에 간단한 스낵류와 음료는 반입 가능합니다. 쓰레기는 꼭 전시장 밖의 휴지통에 버려주세요.
+                </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="section4">
+      <div class="partners_title">
+        <p class="outline_text2 space">OUR</p>
+        <p>PARTNERS</p>
+      </div>
+      <div class="partners">
+        <div class="flow_line">
+        </div>
+        <div class="partners_flow right">
+          <img src="images/partners1.png" alt="Partner">
+          <img src="images/partners2.png" alt="Partner">
+          <img src="images/partners3.png" alt="Partner">
+          <img src="images/partners4.png" alt="Partner">
+          <img src="images/partners9.png" alt="Partner">
+          <img src="images/partners1.png" alt="Partner">
+          <img src="images/partners2.png" alt="Partner">
+          <img src="images/partners3.png" alt="Partner">
+          <img src="images/partners4.png" alt="Partner">
+          <img src="images/partners9.png" alt="Partner">
+        </div>
+        <div class="flow_line">
+        </div>
+        <div class="partners_flow left">
+          <img src="images/partners9.png" alt="Partner">
+          <img src="images/partners6.png" alt="Partner">
+          <img src="images/partners7.png" alt="Partner">
+          <img src="images/partners8.png" alt="Partner">
+          <img src="images/partners9.png" alt="Partner">
+          <img src="images/partners6.png" alt="Partner">
+          <img src="images/partners7.png" alt="Partner">
+          <img src="images/partners8.png" alt="Partner">
+        </div>
+        <div class="flow_line">
+        </div>
+      </div>
+    </div>
+
+    <div id="section5">
+      <div class="partners_title">
+        <p class="outline_text2 space">OUR</p>
+        <p>BRANCHES</p>
+      </div>
+      <div class="branches">
+        <div class="branch">
+          <img src="images/inchon.jpg" alt="Incheon">
+          <div class="branch_name">
+            <span>Incheon</span>
+            <img src="images/branches_arrow.png" alt="arrow">
+          </div>
+        </div>
+        <div class="branch">
+          <img src="images/busan.jpg" alt="Busan">
+          <div class="branch_name">
+            <span>Busan</span>
+            <img src="images/branches_arrow.png" alt="arrow">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="buy_ticket">
+      <div class="buy_ticket">
+        <p>BUY TICKETS</p>
+        <img src="images/buy_ticket_arrow.png" alt="arrow">
+      </div>
+      <div class="buy_ticket_line"></div>
+    </div>
+
+    <div id="footer">
+      <div class="footer_info">
+        <div class="info_text menu">
+          <p>[MENU]</p>
+          <ul>
+            <li>
+              <p>EXHIBITION</p>
+              <img src="images/footer_arrow.png" alt="arrow">
+            </li>
+            <li>
+              <p>VISIT</p>
+              <img src="images/footer_arrow.png" alt="arrow">
+            </li>
+            <li>
+              <p>BRANCHES</p>
+              <img src="images/footer_arrow.png" alt="arrow">
+            </li>
+          </ul>
+        </div>
+        <div class="info_text contacts">
+          <p>[CONTACTS]</p>
+          <ul>
+            <li>
+              <p>대표이사 박아영</p>
+            </li>
+            <li>
+              <p>TEL 1533-0307</p>
+            </li>
+            <li>
+              <p>사업자등록번호 121-15-86375</p>
+            </li>
+          </ul>
+        </div>
+        <div class="info_text sns">
+          <p>[SNS]</p>
+          <ul>
+            <li>
+              <img src="images/insta.png" alt="sns">
+            </li>
+            <li>
+              <img src="images/youtube.png" alt="sns">
+            </li>
+            <li>
+              <img src="images/facebook.png" alt="sns">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_logo">
+        <a href="index.html">
+          <img src="images/footer_logo.png" alt="logo">
+        </a>
+        <p>© 2025 AstraRume. All rights reserved.</p>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(".m_btn").click(function () {
+      $("#m_menu_wrap").css({
+        'margin-left': '0vw',
+        'transition': 'margin-left 0.5s'
+      })
+    });
+    $(".close_btn").click(function () {
+      $("#m_menu_wrap").css({
+        'margin-left': '100vw',
+        'transition': 'margin-left 0.5s'
+      })
+    });
+    $(".m_btn").click(function () {
+      // 메뉴 열기
+      $("#m_menu_wrap").addClass('open'); // 서브 메뉴 열기
+      $(".m_btn img").hide(); // 햄버거 버튼 숨기기
+      $(".close_btn img").show(); // X 버튼 보이게 하기
+    });
+
+    $(".close_btn").click(function () {
+      // 메뉴 닫기
+      $("#m_menu_wrap").removeClass('open'); // 서브 메뉴 닫기
+      $(".m_btn img").show(); // 햄버거 버튼 보이게 하기
+      $(".close_btn img").hide(); // X 버튼 숨기기
+    });
+
+    
+  </script>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- gsap cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
