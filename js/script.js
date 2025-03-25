@@ -187,15 +187,19 @@ $(document).ready(function(){
 
 
 
-  $(".question").click(function () {
-    const $this = $(this);
+  $(document).ready(function () {
+    $(".anser").hide(); // 🔹 모든 답변을 처음부터 숨김
 
-    // 토글 답변 영역
-    $this.next(".anser").slideToggle()
-        .parent().siblings().find(".anser").slideUp();
+    $(".question").click(function () {
+        const $this = $(this);
 
-    // 이미지 회전 토글 및 색상 변경
-    $this.find('img').toggleClass('turn');
+        // 토글 답변 영역
+        $this.next(".anser").slideToggle()
+            .parent().siblings().find(".anser").slideUp();
+
+        // 이미지 회전 토글 및 색상 변경
+        $this.find('img').toggleClass('turn');
+    });
 });
 
 
