@@ -110,7 +110,7 @@ body {
 }
 
 .inner_header {
-  height: 12%;
+  height: 12vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1494,6 +1494,7 @@ body {
 
   #header .mobile_gnb {
     display: block;
+    padding: 6% 0 5% 0;
   }
 
   #header .inner_header {
